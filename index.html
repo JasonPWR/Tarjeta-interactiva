@@ -29,7 +29,7 @@
 
           <img src="./images/bg-card-front.png" alt="front-card" class="bg-card-front">
           <P class="card-number">0000 0000 0000 0000</P>
-          <p class="card-name">Your Name</p>
+          <p id="card-name">Your Name</p>
           <p class="card-date">
             <span class="month-card">00</span>/<span class="year-card">00</span>
           </p>
@@ -44,10 +44,12 @@
       <div class="form-box">
         <p> CARDHOLDER NAME</p>
         <input type="text" name="user" class="card-name-input" autocomplete="off" placeholder="e.g. Jane Appleseed" autofocus maxlength="20">
+        <p></p>
       </div>
       <div class="form-box">
         <p> CARD NUMBER</p>
-        <input type="text" name="user" class="card-number-input" placeholder="e.g. 4153 3523 2353 5235" maxlength="16" autofocus>
+        <input type="text" name="user" class="card-number-input" placeholder="e.g. 4153 3523 2353 5235" maxlength="19" autofocus>
+        <p id="error"></p>
       </div>
       <div class="form-box date-card-box">
         <div class="exp-date">
