@@ -70,14 +70,14 @@ cvcInput.addEventListener("input", (e) => {
     cvcCard.textContent = inputValue;
 });
 
-function showError(pError,inputError,msgError){
-    pError.classList.add("error");
-    pError.textContent = msgError;
+function showError(parrafError,inputError,msgError){
+    parrafError.classList.add("error");
+    parrafError.textContent = msgError;
     inputError.style.borderColor = "#ff5252"
     
 }
-function hideError(pError,inputError){
-    pError.classList.remove("error");
-    pError.textContent = "";
+function hideError(parrafError,inputError){
+    parrafError.classList.remove("error");
+    parrafError.textContent = "";
     inputError.style.borderColor = "#0000001f"
 }
