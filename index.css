@@ -7,9 +7,13 @@
 
 html {
   font-size: 62.5%;
+  font-family: "Space Grotesk", sans-serif;
 }
-
-.bg-main-mobile {
+.div-flex {
+  display: flex;
+  flex-flow: column;
+}
+.bg-main {
   background-image: url(./images/bg-main-mobile.png);
   background-size: cover;
   width: 100%;
@@ -24,6 +28,7 @@ html {
 .bg-card-back {
   max-width: 100%;
   height: 150px;
+  box-shadow: 20px 27px 68px -39px rgba(0, 0, 0, 1);
 }
 .cvc-card {
   position: absolute;
@@ -46,7 +51,8 @@ html {
 .bg-card-front {
   max-width: 100%;
   height: 150px;
-  box-shadow: 1px 27px 68px -39px rgba(0, 0, 0, 1);
+  box-shadow: 20px 27px 68px -39px rgba(0, 0, 0, 1);
+  border-radius: 10px;
 }
 .card-logo {
   max-width: 100%;
@@ -63,6 +69,7 @@ html {
   font-family: "Space Grotesk", sans-serif;
   font-weight: 400;
   color: white;
+  letter-spacing: 2px;
 }
 #card-name {
   position: absolute;
@@ -104,14 +111,12 @@ html {
   border-radius: 4px;
   border: 0.5px solid #0000001f;
   padding: 7px;
-  font-family: "Space Grotesk", sans-serif;
   font-weight: 500;
   font-size: 1.7rem;
   outline: none;
 }
 .error {
-  display:block;
-  text-transform: uppercase;
+  display: block;
   font-family: inherit;
   color: #ff5252;
 }
@@ -130,7 +135,8 @@ html {
 .date-card-box input {
   width: 100%;
 }
-.btn-confirm {
+.btn {
+  font-size: 2rem;
   background-color: #21092f;
   padding: 15px;
   width: 100%;
@@ -138,10 +144,165 @@ html {
   border-radius: 5px;
   color: #dedddf;
 }
-.btn-confirm:hover {
+.btn:hover {
   transition-duration: 0.4s;
   box-shadow: 0px 10px 24px -5px rgba(0, 0, 0, 0.64);
 }
+.card-added-container {
+  display: flex;
+  margin: 20px;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+.card-added {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  width: 100%;
+}
+.card-added h1 {
+  margin: 20px 0 15px 0;
+  font-size: 3rem;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.card-added p {
+  font-size: 2rem;
+  color: #8e8593;
+  margin-bottom: 30px;
+}
+.card-added button {
+  min-width: 200px;
+  max-width: 400px;
+  width: 80%;
+}
+.inactive {
+  display: none;
+}
 
-@media min {
+@media screen and (min-width: 768px) {
+  .bg-card-front-container {
+    margin-left: 150px;
+  }
+
+  .bg-card-front {
+    height: 175px;
+  }
+
+  .bg-card-back-container {
+    margin-right: 190px;
+  }
+  .bg-card-back {
+    height: 175px;
+  }
+  .form-box {
+    margin-bottom: 30px;
+  }
+  .form-box p {
+    font-size: 2rem;
+  }
+  .form-box input {
+    padding: 10px;
+  }
+  .form-container {
+    margin: 150px 80px 20px 80px;
+  }
+  .cvc-card {
+    margin-right: 40px;
+    bottom: 83px;
+    font-size: 1.3rem;
+  }
+  .card-number {
+    font-size: 2.1rem;
+  }
+  #card-name {
+    font-size: 1.3rem;
+  }
+  .card-date {
+    font-size: 1.3rem;
+  }
+  .card-added {
+    margin-top: 100px;
+  }
+}
+@media screen and (min-width: 1156px) {
+  .div-flex {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    width: 100%;
+  }
+
+  .bg-main {
+    background-image: url(images/bg-main-desktop.png);
+    height: 100vh;
+  }
+  .container {
+    height: 100%;
+    width: 30%;
+  }
+  .form-container {
+    width: 35%;
+    margin: 0;
+    position: relative;
+    right: 13%;
+  }
+  .bg-card-front {
+    height: 220px;
+    border-radius: 8px;
+  }
+  .bg-card-front-container {
+    margin-left: 8%;
+  }
+  .card-logo {
+    height: 50px;
+    top: 25px;
+    bottom: 30px;
+  }
+  .card-number {
+    font-size: 2.8rem;
+    bottom: 0px;
+  }
+  #card-name {
+    font-size: 2rem;
+    bottom: -50px;
+  }
+  .card-date {
+    font-size: 2rem;
+    bottom: -50px;
+  }
+  .bg-card-back-container {
+    margin: 0;
+    max-width: fit-content;
+    left: 0;
+    top: 60%;
+    margin-left: 180px;
+  }
+  .bg-card-back {
+    height: 220px;
+    border-radius: 8px;
+  }
+  .cvc-card {
+    margin-right: 50px;
+    bottom: 104px;
+    font-size: 1.8rem;
+  }
+  .card-added-container {
+    width: 400px;
+    height: 300px;
+    position: relative;
+    background: white;
+    justify-content: center;
+    right: 15vw;
+    border-radius: 25px;
+    box-shadow: 0px 0px 25px 5px rgba(0, 0, 0, 0.75);
+  }
+  .card-added {
+    margin: 0;
+  }
 }
