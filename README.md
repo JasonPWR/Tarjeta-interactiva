@@ -35,7 +35,7 @@ Los usuarios deberían poder:
 ### Links
 
 
-- Live Site URL: [Tarjeta-Interactiva](https://interactive-card-frontmentor.netlify.app/)
+- Live Site URL: [Tarjeta-Interactiva](https://interactive-frontmentor.netlify.app/)
 
 ## Proceso:
 
